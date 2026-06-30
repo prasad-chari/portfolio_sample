@@ -1,26 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Analyst Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-    <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </nav>
 
-    <header>
-        <h1>Hi, I'm Prasad, I turn messy data into business insights.</h1>
-        <p>Specializing in SQL, Python, and Tableau dashboards.</p>
-    </header>
+  <!-- Minimal Navigation -->
+  <nav class="site-nav">
+    <div class="logo">Your Name's Portfolio</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <!-- Dark Mode Toggle -->
+      <button id="dark-mode-toggle">🌙</button>
+    </div>
+  </nav>
 
-    <section>
-        <h2>About Me</h2>
-        <p>I am a data analyst passionate about uncovering trends and solving complex business logic problems.</p>
-    </section>
+  <!-- Header Section -->
+  <header class="hero-section">
+    <h1>Your Name Here</h1>
+    <p class="subtitle">Hello! Glad to see you here. This is a collection of my personal projects.</p>
+  </header>
+
+  <!-- Filter Category Tabs -->
+  <div class="filter-tabs">
+    <button class="tab active" data-category="All">All Categories</button>
+    <button class="tab" data-category="Data Visualization">Data Visualization</button>
+    <button class="tab" data-category="Data Science">Data Science</button>
+    <button class="tab" data-category="SQL & Automation">SQL & Automation</button>
+  </div>
+
+  <!-- The Project Grid Layout -->
+<main class="project-grid">
+
+  <!-- Data Visualization Projects -->
+  <div class="project-card" data-category="Data Visualization">
+    <div class="card-image-placeholder"><span>[ Tableau Dashboard Preview ]</span></div>
+    <div class="card-content">
+      <h3>The State of Data Visualization</h3>
+      <p class="tool-tag">(Made in Tableau, 2026)</p>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="Data Visualization">
+    <div class="card-image-placeholder"><span>[ Power BI Report Preview ]</span></div>
+    <div class="card-content">
+      <h3>Sales Performance Dashboard</h3>
+      <p class="tool-tag">(Made in Power BI, 2026)</p>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="Data Visualization">
+    <div class="card-image-placeholder"><span>[ D3.js Chart Preview ]</span></div>
+    <div class="card-content">
+      <h3>Interactive Population Growth Chart</h3>
+      <p class="tool-tag">(Made in D3.js, 2026)</p>
+    </div>
+  </div>
+
+  <!-- Data Science Projects -->
+  <div class="project-card" data-category="Data Science">
+    <div class="card-image-placeholder"><span>[ Python Data Cleaning Preview ]</span></div>
+    <div class="card-content">
+      <h3>Automated Recipe Health Analysis</h3>
+      <p class="tool-tag">(Made in Python, 2026)</p>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="Data Science">
+    <div class="card-image-placeholder"><span>[ ML Model Preview ]</span></div>
+    <div class="card-content">
+      <h3>Customer Sentiment Prediction</h3>
+      <p class="tool-tag">(Made in Scikit-learn, 2026)</p>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="Data Science">
+    <div class="card-image-placeholder"><span>[ Jupyter Notebook Preview ]</span></div>
+    <div class="card-content">
+      <h3>Climate Change Trend Analysis</h3>
+      <p class="tool-tag">(Made in Python, 2026)</p>
+    </div>
+  </div>
+
+  <!-- SQL & Automation Projects -->
+  <div class="project-card" data-category="SQL & Automation">
+    <div class="card-image-placeholder"><span>[ SQL Queries Preview ]</span></div>
+    <div class="card-content">
+      <h3>E-Commerce Churn Database Analysis</h3>
+      <p class="tool-tag">(Made in SQL, 2026)</p>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="SQL & Automation">
+    <div class="card-image-placeholder"><span>[ ETL Workflow Preview ]</span></div>
+    <div class="card-content">
+      <h3>Automated ETL Pipeline Monitoring</h3>
+      <p class="tool-tag">(Made in Python + SQL, 2026)</p>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="SQL & Automation">
+    <div class="card-image-placeholder"><span>[ Automation Script Preview ]</span></div>
+    <div class="card-content">
+      <h3>Database Backup & Recovery Automation</h3>
+      <p class="tool-tag">(Made in Shell + SQL, 2026)</p>
+    </div>
+  </div>
+
+</main>
+
+
+  <!-- About Me Footer Section -->
+  <section id="about" class="about-footer">
+    <h2>About Me</h2>
+    <p>I am a data analyst focused on storytelling through data. Previously I studied at [Your University]. Besides data science, I am passionate about data visualizations and technical writing.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="content-section">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out for collaborations or project inquiries!</p>
+    <p>Email: <strong id="email">yourname@email.com</strong></p>
+  </section>
+
 </body>
 </html>

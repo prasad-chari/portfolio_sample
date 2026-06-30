@@ -1,39 +1,146 @@
+/* General Reset */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
-    padding: 20px;
-    background-color: #f4f7f6;
+    font-family: Arial, sans-serif;
+    background: #fafafa;
     color: #333;
+    transition: background 0.4s ease, color 0.4s ease;
 }
-nav {
-    background: #2c3e50;
-    padding: 15px;
-    border-radius: 5px;
+
+/* Dark Mode */
+body.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
 }
-nav a {
+
+/* Navigation */
+.site-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #222;
+    color: #fff;
+}
+.nav-links a {
     color: #fff;
     text-decoration: none;
-    margin-right: 20px;
-    font-weight: bold;
+    margin-left: 15px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
-nav a.active {
-    color: #1abc9c;
+.nav-links a:hover {
+    color: #0077ff;
+    border-bottom: 2px solid #0077ff;
 }
-header, section {
-    margin-top: 30px;
-    background: #fff;
-    padding: 25px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+/* Dark Mode Navigation */
+body.dark-mode .site-nav {
+    background: #1e1e1e;
+}
+body.dark-mode .nav-links a {
+    color: #e0e0e0;
+}
+body.dark-mode .nav-links a:hover {
+    color: #66b2ff;
+    border-bottom: 2px solid #66b2ff;
+}
+
+/* Toggle Button */
+#dark-mode-toggle {
+    margin-left: 15px;
+    padding: 6px 10px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+body.dark-mode #dark-mode-toggle {
+    color: #ffd700; /* Gold sun icon in dark mode */
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0077ff, #00c6ff);
+    color: #fff;
+    transition: background 0.4s ease;
+}
+body.dark-mode .hero-section {
+    background: linear-gradient(135deg, #333, #555);
+}
+
+/* Filter Tabs */
+.filter-tabs {
+    text-align: center;
+    margin: 20px 0;
+}
+.filter-tabs .tab {
+    padding: 10px 20px;
+    border: none;
+    background: #f0f0f0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 5px;
+}
+.filter-tabs .tab.active {
+    background: #0077ff;
+    color: #fff;
+}
+.filter-tabs .tab:hover {
+    background: #e0e0e0;
+}
+body.dark-mode .filter-tabs .tab {
+    background: #333;
+    color: #e0e0e0;
+}
+body.dark-mode .filter-tabs .tab.active {
+    background: #66b2ff;
+    color: #000;
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 .project-card {
-    border-left: 5px solid #1abc9c;
-    background: #fafafa;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease, color 0.4s ease;
     padding: 15px;
-    margin-bottom: 20px;
 }
-.project-card a {
-    color: #2c3e50;
-    font-weight: bold;
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+body.dark-mode .project-card {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+.card-image-placeholder {
+    background: #eee;
+    padding: 40px;
+    text-align: center;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+body.dark-mode .card-image-placeholder {
+    background: #333;
+}
+
+/* Footer Sections */
+.about-footer, .content-section {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    text-align: center;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+body.dark-mode .about-footer,
+body.dark-mode .content-section {
+    background: #1e1e1e;
+    color: #e0e0e0;
 }
